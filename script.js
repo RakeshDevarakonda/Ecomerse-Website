@@ -1,12 +1,12 @@
-let flag;
+// let flag;
 
-document.cookie = "productVisited=; expires=21 oct 2023 00:00:00 UTC; path=/;";
+// document.cookie = "productVisited=; expires=21 oct 2023 00:00:00 UTC; path=/;";
 
-if (!document.cookie.includes("productVisited=true")) {
-  flag = false;
-} else {
-  flag = true;
-}
+// if (!document.cookie.includes("productVisited=true")) {
+//   flag = false;
+// } else {
+//   flag = true;
+// }
 
 
 
@@ -108,6 +108,98 @@ viewall.forEach((e) => {
 
 
 
+
+
+// }
+
+
+
+
+
+
+// function letfunction1(){
+  
+
+
+// when user click on image navigate to produc.html
+
+let navigate_to_product_on_click_productimage =
+document.querySelectorAll(".productimage");
+
+navigate_to_product_on_click_productimage.forEach((e) => {
+e.addEventListener("click", () => {
+  // taking productsection data and related products data
+  localStorage.setItem(
+    "myproductpagedata",
+    e.closest(".productsection").outerHTML
+  );
+  localStorage.setItem(
+    "relatedproducts",
+    e.closest(".allproducts").outerHTML
+  );
+
+
+  window.location.href = "product.html";
+});
+});
+
+// taking footer to product.html
+
+localStorage.setItem("footer", document.querySelector("footer").outerHTML);
+
+// function to navigate on click of image or text in evericartitem to product.html
+
+function everycartitemtoproduct(event) {
+let gettingimageofeverycartitem = event.target
+  .closest(".everycartitem")
+  .querySelector("img").src;
+document.querySelectorAll(".productimage img").forEach((e) => {
+  if (gettingimageofeverycartitem == e.src) {
+    localStorage.setItem(
+      "myproductpagedata",
+      e.closest(".productsection").outerHTML
+    );
+    localStorage.setItem(
+      "setsectiondata",
+      document.querySelector("section").outerHTML
+    );
+    localStorage.setItem(
+      "setcartdata",
+      document.querySelector(".cartnumber").outerHTML
+    );
+
+    window.location.href = "product.html";
+  }
+});
+}
+
+
+
+
+
+var images = document.querySelectorAll("img");
+
+images.forEach(function(image) {
+var imageUrl = image.getAttribute("src");
+
+var preloadImage = new Image();
+preloadImage.src = imageUrl;
+
+
+});
+
+
+
+window.addEventListener('pageshow', function(event) {
+  if (event.persisted) {
+    this.location.reload()
+  }
+});
+
+
+
+
+window.onload=()=>{
   fetch("navbar.html")
   .then((response) => response.text())
 
@@ -193,12 +285,10 @@ viewall.forEach((e) => {
 
       // fcommentout this  two lines to make changes
 
-      if (flag) {
         document.querySelector(".add-section-content").innerHTML =
           localStorage.getItem("setsectiondata");
         document.querySelector(".cartnumber").outerHTML =
           localStorage.getItem("setcartdata");
-      }
 
 
 
@@ -723,93 +813,4 @@ viewall.forEach((e) => {
       });
     }
   });
-
-// }
-
-
-
-// function letfunction1(){
-  
-
-
-// when user click on image navigate to produc.html
-
-let navigate_to_product_on_click_productimage =
-document.querySelectorAll(".productimage");
-
-navigate_to_product_on_click_productimage.forEach((e) => {
-e.addEventListener("click", () => {
-  // taking productsection data and related products data
-  localStorage.setItem(
-    "myproductpagedata",
-    e.closest(".productsection").outerHTML
-  );
-  localStorage.setItem(
-    "relatedproducts",
-    e.closest(".allproducts").outerHTML
-  );
-
-
-  window.location.href = "product.html";
-});
-});
-
-// taking footer to product.html
-
-localStorage.setItem("footer", document.querySelector("footer").outerHTML);
-
-// function to navigate on click of image or text in evericartitem to product.html
-
-function everycartitemtoproduct(event) {
-let gettingimageofeverycartitem = event.target
-  .closest(".everycartitem")
-  .querySelector("img").src;
-document.querySelectorAll(".productimage img").forEach((e) => {
-  if (gettingimageofeverycartitem == e.src) {
-    localStorage.setItem(
-      "myproductpagedata",
-      e.closest(".productsection").outerHTML
-    );
-    localStorage.setItem(
-      "setsectiondata",
-      document.querySelector("section").outerHTML
-    );
-    localStorage.setItem(
-      "setcartdata",
-      document.querySelector(".cartnumber").outerHTML
-    );
-
-    window.location.href = "product.html";
-  }
-});
-}
-
-
-
-
-
-var images = document.querySelectorAll("img");
-
-images.forEach(function(image) {
-var imageUrl = image.getAttribute("src");
-
-var preloadImage = new Image();
-preloadImage.src = imageUrl;
-
-
-});
-
-
-
-window.addEventListener('pageshow', function(event) {
-  if (event.persisted) {
-    this.location.reload()
-  }
-});
-
-
-
-
-window.onload=()=>{
-  alert("onloaded")
 }
