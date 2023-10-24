@@ -13,6 +13,7 @@ LIVE DEMO -
 Welcome to our E-commerce website! This website allows users to browse and purchase products, view product details, and use local storage to manage their shopping cart.
 
 
+
 ## Features
 
 - **Product Browsing**: Users can browse a list of available products.

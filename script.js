@@ -11,7 +11,6 @@ if (!document.cookie.includes("productVisited=true")) {
 }
 
 
-console.log(flag)
 
 $(document).ready(function () {
   // this code used for image slide

@@ -95,7 +95,6 @@ fetch("navbar.html")
           if (firstimage==cartimagesrc){
             
 
-
             let datavalueid=e.getAttribute("data-valueid")
 
             document.querySelector(".addtocart2").setAttribute("data-id",datavalueid)
