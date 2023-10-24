@@ -50,7 +50,8 @@ $(document).ready(function () {
 
   //banner slider
 
-window.onload=()=>{
+
+
   let banner = $(".bannerimages").first();
   let i = 1;
   $(this).css("transform", "translateX(-100%)");
@@ -76,8 +77,10 @@ window.onload=()=>{
   $(".categorytext").mouseleave(function () {
     $(".categorydropdown").addClass("d-none");
   });
+
+
+
 });
-}
 
 
 
@@ -105,7 +108,6 @@ viewall.forEach((e) => {
 
 
 
-// function letfunction2(){
   fetch("navbar.html")
   .then((response) => response.text())
 
@@ -197,6 +199,8 @@ viewall.forEach((e) => {
         document.querySelector(".cartnumber").outerHTML =
           localStorage.getItem("setcartdata");
       }
+
+
 
       localStorage.setItem(
         "setsectiondata",
@@ -802,3 +806,10 @@ window.addEventListener('pageshow', function(event) {
     this.location.reload()
   }
 });
+
+
+
+
+window.onload=()=>{
+  alert("onloaded")
+}
