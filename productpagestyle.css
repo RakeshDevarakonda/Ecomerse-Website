@@ -1,0 +1,344 @@
+   
+        @media screen and (min-width:992px) {
+            .allproductimages {
+                width: 80%;
+                position: sticky;
+                top: 35vh;
+                height: 75vh;
+            }
+
+            .buyandaddbutton {
+
+                width: 30%;
+                height: 50%;
+                margin: 2vh 1vh 2px 1px !important;
+
+                border-radius: 150px !important;
+
+
+            }
+
+
+        }
+
+
+
+        @media screen and (max-width:992px) {
+
+
+            .firstimage img {
+                height: 50vh !important;
+            }
+
+            .buyandaddbutton {
+                width: 30%;
+                height: 50%;
+                padding: 10px;
+                margin: 2vh 1vh 2px 1px !important;
+                border-radius: 150px;
+                padding: 10px !important;
+
+                .amazonlogo {
+                    display: flex;
+                    justify-content: center !important;
+                    align-items: center !important;
+                }
+            }
+
+
+
+
+
+        }
+
+        @media screen and (max-width:768px) {
+
+            .allimages {
+                flex-direction: column-reverse !important;
+
+            }
+
+            .remainingimages {
+                flex-direction: row !important;
+            }
+
+            .firstimage img {
+                height: 40vh !important;
+            }
+
+            .imagesanddetails {
+                margin-top: 15vh !important;
+            }
+        }
+
+
+
+        @media screen and (max-width:576px) {
+
+            .firstimage img {
+                height: 40vh !important;
+            }
+
+
+
+            .buyandaddbutton {
+
+                width: 40%;
+                height: 50%;
+                padding: 10px;
+                margin: 2vh 1vh 2px 1px !important;
+                border-radius: 150px;
+
+            }
+
+         
+        }
+
+
+        @media screen and (max-width:400px) {
+
+            .buyandaddbutton {
+                width: 40%;
+                height: 50%;
+                margin: 2vh 1vh 2px 1px !important;
+                border-radius: 150px;
+
+            }
+
+        }
+
+        @media screen and (max-width:350px) {
+       
+            .buyandaddbutton{
+                font-size: 3vh;
+            }
+            
+        }
+
+
+
+
+
+
+        /* ///// */
+        .name h4 {
+                font-size: 3vh;
+                margin-top: 10px;
+            }
+
+         .one   .mainprice {
+                font-size: 3vh !important;
+                font-weight: 600;
+
+            }
+
+           .one .crossprice {
+                font-size: 1.8vh !important;
+            }
+
+            .chooseyoursize {
+                font-size: 2.5vh !important;
+
+            }
+
+            .offers {
+                margin: 3vh 0px !important;
+            }
+
+            .offers h4 {
+                font-size: 2.5vh !important;
+                margin-bottom: 2vh !important;
+            }
+
+            .choosecolor {
+                font-size: 2.5vh;
+                margin: 3vh 0px !important;
+            }
+
+            .description {
+                margin-top: 3vh !important;
+            }
+
+
+        /* //// */
+
+
+
+
+
+
+
+
+
+        .imagesanddetails {
+            margin-top: 35vh;
+            margin-bottom: 10vh;
+
+        }
+
+
+
+
+        .allimages {
+
+            height: 85%;
+        }
+
+        .buttonsss {
+            height: 15%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .productdetails {
+            width: 100%;
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        .firstimage img {
+            height: 60vh;
+
+        }
+
+
+
+        .remainingimages img {
+            height: 10vh;
+            margin: 1vh;
+
+        }
+
+
+
+
+        
+
+
+
+        .name2 h4 {
+            font-size: 1rem;
+            font-weight: normal;
+        }
+
+        .rating span {
+            font-size: 2vh;
+        }
+
+
+        .checked {
+            color: rgb(255, 170, 0);
+        }
+
+        .size label {
+            font-size: 2vh;
+        }
+
+        .size select {
+            font-size: 2vh;
+        }
+
+
+
+        .sizeinside .sizebutton {
+            width: 8vh;
+            margin: 2vh 1vh 0px 0px;
+            padding: 0.5vh;
+            font-size: 2vh;
+
+
+
+            border: 1px solid rgb(248, 248, 248);
+            border-radius: 150px;
+
+        }
+
+
+        .colorballs {
+            height: 6vh;
+            width: 6.2vh;
+            border-radius: 100%;
+            background-color: antiquewhite;
+            margin-right: 1vh;
+
+
+
+
+        }
+
+        .color .red {
+            background-color: red;
+        }
+
+        .color .blue {
+            background-color: blue;
+        }
+
+        .color .green {
+            background-color: green;
+        }
+
+        .color .yellow {
+            background-color: yellow;
+        }
+
+        .description h5 {
+            font-size: 3vh;
+        }
+
+        .description p {
+            font-size: 2vh;
+        }
+
+
+
+
+
+        .amazonlogo li {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            margin-right: 4vh;
+        }
+
+        .amazonlogo li i {
+            font-size: 5vh;
+            text-align: center;
+            color: rgb(111, 77, 22);
+        }
+
+        .viewall2 {
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
+            font-size: 2vh;
+        }
+
+
+        .increment,
+        .decrement {
+            border: 1px solid black;
+            padding: 0px 5px;
+            margin: 0px 5px;
+            background-color: transparent;
+            text-align: center;
+            border-radius: 0px;
+        }
+
+
+
+        select {
+            cursor: pointer;
+        }

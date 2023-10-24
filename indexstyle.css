@@ -1,0 +1,254 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+
+
+@media screen and (max-width:1200px) {
+  .productsection {
+    max-width: 10vh !important;
+    
+    margin: 20px 10px !important;
+    overflow: hidden;
+  }
+  
+}
+
+
+
+@media screen and (max-width: 992px) {
+  .productsection {
+    min-width: 18vh !important;
+    max-width: 18vh !important;
+  }
+
+}
+@media screen and (max-width: 768px) {
+  .banner1 {
+    min-width: 100% !important;
+  }
+  .productsection {
+    min-width: 18vh !important;
+    max-width: 18vh !important;
+  }
+  .firstbanner {
+    margin: 12vh 50px 0px 0px !important;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .withsearchbar{
+    margin-top: 20vh !important;
+  }
+
+  
+}
+
+@media screen and (max-width: 576px) {
+  .banner1 {
+    min-width: 100% !important;
+  }
+  .productsection {
+    min-width:18vh !important;
+    max-width: 18vh !important;
+
+    margin: 20px 8px !important;
+    overflow: hidden;
+  }
+
+  .footerdiv {
+    width: 200px !important;
+  }
+  .footerdiv p,
+  .footerdiv h4 {
+    margin-left: 25%;
+  }
+}
+
+
+
+@media screen and (max-width: 400px) {
+  .footerdiv {
+    width: 140px !important;
+    margin-bottom: 20px;
+  }
+  .addtocart{
+    font-size: 2vh ;
+  }
+}
+
+@media screen and (max-width:350px) {
+  
+  
+}
+
+
+
+
+
+.firstbanner {
+  margin: 30vh 50px 0px 0px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+.watchbanner{
+  margin: 5vh 50px 0px 0px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.shoebanner{
+  margin: 5vh 50px 0px 0px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.banner1 {
+  width: 80%;
+  overflow-x: scroll;
+}
+
+.bannerimages {
+  width: 100%;
+  display: flex;
+  transition: all 1s ease-in-out;
+}
+
+.bannerimages img {
+  height: auto;
+  width: 100%;
+}
+
+
+
+::-webkit-scrollbar {
+  width: 5px;
+  
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+.allproducts {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  overflow: scroll;
+}
+
+
+
+.productsection {
+  min-width: 18vh;
+  max-width: 18vh;
+  margin: 20px 20px;
+  /* overflow: scroll; */
+  overflow: hidden;
+}
+.productimage {
+  display: flex;
+  width: 100%;
+  margin-bottom: 5px;
+  transition: all 0.5s;
+}
+
+.productimage img {
+  width: 100%;
+}
+
+.nametag h4 {
+  font-family: sans-serif;
+  font-weight: 500;
+  margin: 8px 0px;
+  font-size: 2.5vh;
+}
+
+.rating {
+  font-size: 1.5vh;
+  margin: 0px 0px 8px 0px;
+}
+
+.checked {
+  color: rgb(243, 146, 0);
+}
+.price {
+  display: flex;
+  font-family: sans-serif;
+}
+
+.price .mainprice {
+  font-size: 1.8vh;
+}
+
+.price .crossprice {
+  text-decoration: line-through;
+  margin-left: 10px;
+  opacity: 0.7;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  font-size: 1.4vh;
+}
+
+footer {
+  background-color: rgb(34, 34, 33);
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+footer p {
+  font-size: 1.5vh;
+}
+
+.footersection {
+  margin: 50px 0px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  color: aliceblue;
+  font-size: 2vh;
+}
+
+.footersection h4 {
+  font-size: 2.3vh;
+}
+
+.footersection p:hover {
+  cursor: pointer;
+  color: rgb(174, 118, 46);
+}
+
+.footerdiv {
+  margin-bottom: 20px;
+}
+
+.viewall {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 2vh;
+}
+
+
