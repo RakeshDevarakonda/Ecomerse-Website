@@ -2,6 +2,8 @@ let flag;
 
 // document.cookie = "productVisited=; expires=21 oct 2023 00:00:00 UTC; path=/;";
 
+
+
 if (!document.cookie.includes("productVisited=true")) {
   flag = false;
 } else {
