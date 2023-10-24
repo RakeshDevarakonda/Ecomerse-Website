@@ -84,9 +84,9 @@ fetch("navbar.html")
 
       if (document.querySelector(".everycartitem") && (document.querySelector(".addtocart2").innerHTML== '<i class="fa fa-shopping-cart blue-color me-2"></i>Add to cart') ){
         
-
+        
         let firstimage=document.querySelector(".firstimage img").src
-  
+        
         
         document.querySelectorAll(".everycartitem").forEach((e)=>{
           
@@ -94,11 +94,15 @@ fetch("navbar.html")
           
           if (firstimage==cartimagesrc){
             
+
+
             let datavalueid=e.getAttribute("data-valueid")
 
             document.querySelector(".addtocart2").setAttribute("data-id",datavalueid)
-            document.querySelector(".addtocart2".innerHTML== '<i class="fa fa-shopping-cart blue-color me-2"></i>Added to cart')
+            document.querySelector( ".addtocart2" ).innerHTML = `<i class='fa fa-shopping-cart blue-color me-2'></i>Added to cart`;
             document.querySelector(".addtocart2").style.backgroundColor = "#198754";
+
+            console.log(document.querySelector(".addtocart2"))
 
 
 
@@ -123,7 +127,6 @@ fetch("navbar.html")
 
 
     else {
-
 
 
       // if setsectiondata not present then apply setsectiondata2 here data2 is used after and before this code
@@ -292,8 +295,11 @@ fetch("navbar.html")
 
     // when user click on add to cart button
 
+
     productaddtocartbutton.addEventListener("click", () => {
       let buttontext = productaddtocartbutton.innerText;
+
+      console.log(productaddtocartbutton)
 
       let productsection = productaddtocartbutton.closest(".imagesanddetails");
 
@@ -671,7 +677,6 @@ if (storedData) {
     });
   });
 }
-
 
 
 

@@ -96,3 +96,4 @@ document.querySelector(".smallscreensearch").addEventListener("click",()=>{
 
 
 
+
