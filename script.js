@@ -43,10 +43,14 @@ $(document).ready(function () {
     });
   });
 
+
+
+
   // this code used for image slide completed
 
   //banner slider
 
+window.onload=()=>{
   let banner = $(".bannerimages").first();
   let i = 1;
   $(this).css("transform", "translateX(-100%)");
@@ -73,6 +77,9 @@ $(document).ready(function () {
     $(".categorydropdown").addClass("d-none");
   });
 });
+}
+
+
 
 //  applicable for veiw all button
 
