@@ -1,19 +1,15 @@
-// let flag;
+let flag;
 
 // document.cookie = "productVisited=; expires=21 oct 2023 00:00:00 UTC; path=/;";
 
-// if (!document.cookie.includes("productVisited=true")) {
-//   flag = false;
-// } else {
-//   flag = true;
-// }
+if (!document.cookie.includes("productVisited=true")) {
+  flag = false;
+} else {
+  flag = true;
+}
 
 
-
-
-
-
-
+console.log(flag)
 
 $(document).ready(function () {
   // this code used for image slide
@@ -43,14 +39,9 @@ $(document).ready(function () {
     });
   });
 
-
-
-
   // this code used for image slide completed
 
   //banner slider
-
-
 
   let banner = $(".bannerimages").first();
   let i = 1;
@@ -77,12 +68,7 @@ $(document).ready(function () {
   $(".categorytext").mouseleave(function () {
     $(".categorydropdown").addClass("d-none");
   });
-
-
-
 });
-
-
 
 //  applicable for veiw all button
 
@@ -104,103 +90,7 @@ viewall.forEach((e) => {
   });
 });
 
-
-
-
-
-
-
-// }
-
-
-
-
-
-
-// function letfunction1(){
-  
-
-
-// when user click on image navigate to produc.html
-
-let navigate_to_product_on_click_productimage =
-document.querySelectorAll(".productimage");
-
-navigate_to_product_on_click_productimage.forEach((e) => {
-e.addEventListener("click", () => {
-  // taking productsection data and related products data
-  localStorage.setItem(
-    "myproductpagedata",
-    e.closest(".productsection").outerHTML
-  );
-  localStorage.setItem(
-    "relatedproducts",
-    e.closest(".allproducts").outerHTML
-  );
-
-
-  window.location.href = "product.html";
-});
-});
-
-// taking footer to product.html
-
-localStorage.setItem("footer", document.querySelector("footer").outerHTML);
-
-// function to navigate on click of image or text in evericartitem to product.html
-
-function everycartitemtoproduct(event) {
-let gettingimageofeverycartitem = event.target
-  .closest(".everycartitem")
-  .querySelector("img").src;
-document.querySelectorAll(".productimage img").forEach((e) => {
-  if (gettingimageofeverycartitem == e.src) {
-    localStorage.setItem(
-      "myproductpagedata",
-      e.closest(".productsection").outerHTML
-    );
-    localStorage.setItem(
-      "setsectiondata",
-      document.querySelector("section").outerHTML
-    );
-    localStorage.setItem(
-      "setcartdata",
-      document.querySelector(".cartnumber").outerHTML
-    );
-
-    window.location.href = "product.html";
-  }
-});
-}
-
-
-
-
-
-var images = document.querySelectorAll("img");
-
-images.forEach(function(image) {
-var imageUrl = image.getAttribute("src");
-
-var preloadImage = new Image();
-preloadImage.src = imageUrl;
-
-
-});
-
-
-
-window.addEventListener('pageshow', function(event) {
-  if (event.persisted) {
-    this.location.reload()
-  }
-});
-
-
-
-
-window.onload=()=>{
-  fetch("navbar.html")
+fetch("navbar.html")
   .then((response) => response.text())
 
   .then((data) => {
@@ -285,12 +175,12 @@ window.onload=()=>{
 
       // fcommentout this  two lines to make changes
 
+      if (flag) {
         document.querySelector(".add-section-content").innerHTML =
           localStorage.getItem("setsectiondata");
         document.querySelector(".cartnumber").outerHTML =
           localStorage.getItem("setcartdata");
-
-
+      }
 
       localStorage.setItem(
         "setsectiondata",
@@ -599,6 +489,9 @@ window.onload=()=>{
           e.setAttribute("title", "click to remove from cart");
           cartnumber.textContent = countthecartnumber + 1;
 
+document.cookie = 'productVisited=true; path=/';
+          
+
           // if everycartitem is presnt then display checkout and ttal rupees else dont display
 
           if (document.querySelector(".everycartitem")) {
@@ -608,6 +501,11 @@ window.onload=()=>{
             document.querySelector(".totalrupees").classList.add("d-none");
             document.querySelector(".totalrupees").classList.remove("d-flex");
           }
+
+
+
+
+
 
           localStorage.setItem(
             "setsectiondata",
@@ -678,30 +576,30 @@ window.onload=()=>{
 
     function addtocartitems(productData) {
       let cartitemdetails = `
-            <div data-valueid=${createdynamicid}   class="d-flex  everycartitem align-items-center justify-content-evenly  " >
-            <div class="d-flex flex-row align-items-center  setimageandname">
-              <img class="me-3 productimage2" src="${productData.image}" alt="">
-            <h5 class="productname">${productData.name}</h5>
-            </div>
+          <div data-valueid=${createdynamicid}   class="d-flex  everycartitem align-items-center justify-content-evenly  " >
+          <div class="d-flex flex-row align-items-center  setimageandname">
+            <img class="me-3 productimage2" src="${productData.image}" alt="">
+          <h5 class="productname">${productData.name}</h5>
+          </div>
 
-            <div class="chooseyoursize">
-            <label >Choose a size:</label>
+          <div class="chooseyoursize">
+          <label >Choose a size:</label>
 
-            <select>
-            <option >S</option>
-            <option >L</option>
-            <option >XL</option>
-            <option >XXL</option>
-            </select>
-            </div>
-            <h5 class="me-3 pricedata">${productData.price} </h5>
+          <select>
+          <option >S</option>
+          <option >L</option>
+          <option >XL</option>
+          <option >XXL</option>
+          </select>
+          </div>
+          <h5 class="me-3 pricedata">${productData.price} </h5>
 
-              <div class="counter">
-                <button class="btn  decrement">-</button>
-                <span class="count">1</span>
-                <button class="btn increment">+</button>
-              </div>
+            <div class="counter">
+              <button class="btn  decrement">-</button>
+              <span class="count">1</span>
+              <button class="btn increment">+</button>
             </div>
+          </div>
 
 
 `;
@@ -775,9 +673,7 @@ window.onload=()=>{
       incrementButton.addEventListener("click", (event) => {
         if (
           !getdatavelueidarray.includes(
-            event.target
-              .closest(".everycartitem")
-              .getAttribute("data-valueid")
+            event.target.closest(".everycartitem").getAttribute("data-valueid")
           )
         ) {
           incrementfunction(event);
@@ -795,9 +691,7 @@ window.onload=()=>{
       decrementButton.addEventListener("click", (event) => {
         if (
           !getdatavelueidarray.includes(
-            event.target
-              .closest(".everycartitem")
-              .getAttribute("data-valueid")
+            event.target.closest(".everycartitem").getAttribute("data-valueid")
           )
         ) {
           decrementfunction(event);
@@ -813,4 +707,69 @@ window.onload=()=>{
       });
     }
   });
+
+// when user click on image navigate to produc.html
+
+let navigate_to_product_on_click_productimage =
+  document.querySelectorAll(".productimage");
+
+navigate_to_product_on_click_productimage.forEach((e) => {
+  e.addEventListener("click", () => {
+    // taking productsection data and related products data
+    localStorage.setItem(
+      "myproductpagedata",
+      e.closest(".productsection").outerHTML
+    );
+    localStorage.setItem(
+      "relatedproducts",
+      e.closest(".allproducts").outerHTML
+    );
+
+    window.location.href = "product.html";
+  });
+});
+
+// taking footer to product.html
+
+localStorage.setItem("footer", document.querySelector("footer").outerHTML);
+
+// function to navigate on click of image or text in evericartitem to product.html
+
+function everycartitemtoproduct(event) {
+  let gettingimageofeverycartitem = event.target
+    .closest(".everycartitem")
+    .querySelector("img").src;
+  document.querySelectorAll(".productimage img").forEach((e) => {
+    if (gettingimageofeverycartitem == e.src) {
+      localStorage.setItem(
+        "myproductpagedata",
+        e.closest(".productsection").outerHTML
+      );
+      localStorage.setItem(
+        "setsectiondata",
+        document.querySelector("section").outerHTML
+      );
+      localStorage.setItem(
+        "setcartdata",
+        document.querySelector(".cartnumber").outerHTML
+      );
+
+      window.location.href = "product.html";
+    }
+  });
 }
+
+var images = document.querySelectorAll("img");
+
+images.forEach(function (image) {
+  var imageUrl = image.getAttribute("src");
+
+  var preloadImage = new Image();
+  preloadImage.src = imageUrl;
+});
+
+window.addEventListener("pageshow", function (event) {
+  if (event.persisted) {
+    this.location.reload();
+  }
+});
