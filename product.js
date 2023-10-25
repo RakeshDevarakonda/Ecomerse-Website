@@ -26,6 +26,9 @@ fetch("navbar.html")
 
     // setting navbar and cart and cartnumber
 
+
+    console.log("fetch")
+
     document.querySelector(".add-navbar-content").innerHTML = navselect.outerHTML;
     document.querySelector(".add-section-content").innerHTML = localStorage.getItem("setsectiondata");
     document.querySelector(".cartnumber").outerHTML = localStorage.getItem("setcartdata");
@@ -34,7 +37,6 @@ fetch("navbar.html")
     // here section data means cart items 
 
     if (localStorage.getItem("setsectiondata")) {
-
 
 
 
@@ -48,6 +50,7 @@ fetch("navbar.html")
       localStorage.removeItem("setsectiondata");
       localStorage.setItem( "setsectiondata2", document.querySelector("section").outerHTML );
       localStorage.setItem( "setcartdata2", document.querySelector(".cartnumber").outerHTML );
+
 
 
 
@@ -83,8 +86,12 @@ fetch("navbar.html")
 
 
       if (document.querySelector(".everycartitem") && (document.querySelector(".addtocart2").innerHTML== '<i class="fa fa-shopping-cart blue-color me-2"></i>Add to cart') ){
+
+
         
+
         
+
         let firstimage=document.querySelector(".firstimage img").src
         
         
@@ -101,7 +108,6 @@ fetch("navbar.html")
             document.querySelector( ".addtocart2" ).innerHTML = `<i class='fa fa-shopping-cart blue-color me-2'></i>Added to cart`;
             document.querySelector(".addtocart2").style.backgroundColor = "#198754";
 
-            console.log(document.querySelector(".addtocart2"))
 
 
 
@@ -110,6 +116,9 @@ fetch("navbar.html")
 
 
         })
+
+
+
       }
 
 
@@ -126,7 +135,6 @@ fetch("navbar.html")
 
 
     else {
-
 
       // if setsectiondata not present then apply setsectiondata2 here data2 is used after and before this code
 
@@ -286,11 +294,58 @@ fetch("navbar.html")
 
 
     if (hasproductid) {
-      document.querySelector( ".addtocart2" ).innerHTML = `<i class='fa fa-shopping-cart blue-color me-2'></i>Added to cart`;
-      document.querySelector(".addtocart2").style.backgroundColor = "#198754";
-      document .querySelector(".addtocart2") .setAttribute("data-id", hasproductid);
-      hasproductid = null;
+
+
+
+
+
+      if (document.querySelector(".everycartitem")){
+
+
+        let firstimage=document.querySelector(".firstimage img").src
+
+
+        
+        
+        document.querySelectorAll(".everycartitem").forEach((e)=>{
+          
+          let cartimagesrc=e.querySelector(".setimageandname img").src
+          
+          if (firstimage==cartimagesrc){
+            
+
+            let datavalueid=e.getAttribute("data-valueid")
+
+            document.querySelector(".addtocart2").setAttribute("data-id",datavalueid)
+            document.querySelector( ".addtocart2" ).innerHTML = `<i class='fa fa-shopping-cart blue-color me-2'></i>Added to cart`;
+            document.querySelector(".addtocart2").style.backgroundColor = "#198754";
+
+
+
+
+          }
+
+
+
+        })
+
+      }
+
+
+
+
+
+
+      // document.querySelector( ".addtocart2" ).innerHTML = `<i class='fa fa-shopping-cart blue-color me-2'></i>Added to cart`;
+      // document.querySelector(".addtocart2").style.backgroundColor = "#198754";
+      // document .querySelector(".addtocart2") .setAttribute("data-id", hasproductid);
+      // hasproductid=null
+
+
+
     }
+
+
 
     // when user click on add to cart button
 
@@ -298,7 +353,6 @@ fetch("navbar.html")
     productaddtocartbutton.addEventListener("click", () => {
       let buttontext = productaddtocartbutton.innerText;
 
-      console.log(productaddtocartbutton)
 
       let productsection = productaddtocartbutton.closest(".imagesanddetails");
 
@@ -615,7 +669,6 @@ fetch("navbar.html")
   
 
 
-
   // taking data of clicked product section 
   
 
@@ -640,6 +693,9 @@ if (storedData) {
 
 
   // setting name price and other details to product.html
+
+
+
 
 
 
@@ -675,6 +731,8 @@ if (storedData) {
       firstimage.src = e.src;
     });
   });
+
+
 }
 
 
@@ -883,6 +941,8 @@ function incrementfunction(event) {
     totalrupees.textContent = gottotalprice + parseInt(totalrupees.textContent);
   });
 }
+
+
 
 
 
