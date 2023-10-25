@@ -124,7 +124,15 @@ fetch("navbar.html").then((response) => response.text()).then((data) => {
 
 
 
+        if (!document.querySelector(".everycartitem")) {
+            document.querySelector(".ordernow").disabled = true
+            document.querySelector(".ordernow button").style.cursor = "not-allowed"
+            document.querySelector(".ordernow button").innerText = "Your Cart Is Empty Please Add Some Products"
+            document.querySelector(".ordernow button").style.backgroundColor="grey"
 
+
+
+        }
         
 
 
