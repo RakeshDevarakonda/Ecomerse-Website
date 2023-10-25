@@ -793,9 +793,9 @@ viewall12.addEventListener("click", () => {
 
   
 
-  if (e.innerHTML == "See Less") {
+  if (viewall12.innerHTML == "See Less") {
     wrap.style.justifyContent = "center";
-  } else if (e.innerHTML == "Veiw All") {
+  } else if (viewall12.innerHTML == "Veiw All") {
     wrap.style.justifyContent = "flex-start";
   }
   
