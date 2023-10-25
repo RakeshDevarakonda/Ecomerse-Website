@@ -254,6 +254,8 @@ fetch("navbar.html")
         incrementfunction(event);
         localStorage.setItem( "setsectiondata2", document.querySelector("section").outerHTML );
         localStorage.setItem( "setcartdata2", document.querySelector(".cartnumber").outerHTML );
+        localStorage.setItem("checkoutdataofcartitems",(document.querySelector("section").outerHTML))
+        localStorage.setItem("checkoutdataofcartnumber",(document.querySelector(".cartnumber").outerHTML))
       });
     });
 
@@ -262,6 +264,8 @@ fetch("navbar.html")
         decrementfunction(event);
         localStorage.setItem( "setsectiondata2", document.querySelector("section").outerHTML );
         localStorage.setItem( "setcartdata2", document.querySelector(".cartnumber").outerHTML );
+        localStorage.setItem("checkoutdataofcartitems",(document.querySelector("section").outerHTML))
+        localStorage.setItem("checkoutdataofcartnumber",(document.querySelector(".cartnumber").outerHTML))
       });
     });
 
@@ -420,6 +424,10 @@ fetch("navbar.html")
         localStorage.setItem( "setsectiondata2", document.querySelector("section").outerHTML );
         localStorage.setItem( "setcartdata2", document.querySelector(".cartnumber").outerHTML );
 
+
+        localStorage.setItem("checkoutdataofcartitems",(document.querySelector("section").outerHTML))
+        localStorage.setItem("checkoutdataofcartnumber",(document.querySelector(".cartnumber").outerHTML))
+
         if (document.querySelector(".everycartitem")) {
           document.querySelector(".totalrupees").classList.remove("d-none");
           document.querySelector(".totalrupees").classList.add("d-flex");
@@ -552,14 +560,10 @@ fetch("navbar.html")
 
           if (checkimage == run2) {
             incrementfunction(event);
-            localStorage.setItem(
-              "setsectiondata2",
-              document.querySelector("section").outerHTML
-            );
-            localStorage.setItem(
-              "setcartdata2",
-              document.querySelector(".cartnumber").outerHTML
-            );
+            localStorage.setItem( "setsectiondata2", document.querySelector("section").outerHTML );
+            localStorage.setItem( "setcartdata2", document.querySelector(".cartnumber").outerHTML );
+            localStorage.setItem("checkoutdataofcartitems",(document.querySelector("section").outerHTML))
+            localStorage.setItem("checkoutdataofcartnumber",(document.querySelector(".cartnumber").outerHTML))
           }
         });
       });
@@ -571,14 +575,10 @@ fetch("navbar.html")
             .querySelector("img").src;
           if (checkimage == run2) {
             decrementfunction(event);
-            localStorage.setItem(
-              "setsectiondata2",
-              document.querySelector("section").outerHTML
-            );
-            localStorage.setItem(
-              "setcartdata2",
-              document.querySelector(".cartnumber").outerHTML
-            );
+            localStorage.setItem( "setsectiondata2", document.querySelector("section").outerHTML );
+            localStorage.setItem( "setcartdata2", document.querySelector(".cartnumber").outerHTML );
+            localStorage.setItem("checkoutdataofcartitems",(document.querySelector("section").outerHTML))
+            localStorage.setItem("checkoutdataofcartnumber",(document.querySelector(".cartnumber").outerHTML))
           }
         });
       });
@@ -911,6 +911,14 @@ function decrementfunction(event) {
         gottotalprice + parseInt(totalrupees.textContent);
     });
   }
+
+
+
+
+
+
+
+
 }
 
 function incrementfunction(event) {
