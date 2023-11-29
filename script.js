@@ -111,7 +111,7 @@ fetch("navbar.html")
 
     // this section data is taking info from product.html
 
-    
+
 
     let sectiondatafromproduct = localStorage.getItem("setsectiondata2");
 
@@ -660,8 +660,7 @@ document.cookie = 'productVisited=true; path=/';
         getthatpricedata.querySelector(".pricedata").textContent.slice(3)
       );
       let totalrupees = document.querySelector(".gettotalrupees");
-      totalrupees.textContent =
-        parseInt(totalrupees.textContent) + geteverycartitemprice;
+      totalrupees.textContent = parseInt(totalrupees.textContent) + geteverycartitemprice;
 
       // this decremrnt and increment works only on non localStorage
 
