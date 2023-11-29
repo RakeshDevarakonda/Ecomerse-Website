@@ -111,6 +111,8 @@ fetch("navbar.html")
 
     // this section data is taking info from product.html
 
+    
+
     let sectiondatafromproduct = localStorage.getItem("setsectiondata2");
 
     if (sectiondatafromproduct) {
@@ -120,6 +122,7 @@ fetch("navbar.html")
         sectiondatafromproduct;
       document.querySelector(".cartnumber").outerHTML =
         localStorage.getItem("setcartdata2");
+
 
       // if data is present then set thieir datavaluie id to required productsection and set add to cart and added to cart
 
