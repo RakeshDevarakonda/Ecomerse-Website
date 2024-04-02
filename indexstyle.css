@@ -125,6 +125,7 @@
 
 .bannerimages img {
   height: auto;
+  flex-shrink: 0;
   width: 100%;
 }
 
@@ -175,7 +176,11 @@
 }
 
 .productimage img {
+  flex-shrink: 0;
   width: 100%;
+
+
+
 }
 
 .nametag h4 {
